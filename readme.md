@@ -1,5 +1,5 @@
 # O que é?
-`folha_mat.py` é um programinha para printar os títulos das matéria da Folha de SP. nos terminais Linux/MAC ou prompt cmd do Windows.
+`folha_mat.py` é um programinha inspirado no bot de telegram @WBonner_bot, para printar os títulos das matéria da Folha de SP. nos terminais Linux/MAC ou prompt cmd do Windows.
 
 ## Por que?
 Bem, eu sou preguiçoso e sempre tenho um terminal aberto. Então se você
