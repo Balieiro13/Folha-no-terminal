@@ -40,7 +40,8 @@ def scrap_article(n):
         x = str(arc)
         if x.startswith('<p>'):
             x = re.sub(r'<.*?>', '', x)
-            formated_lines.append(x.strip())
+            x = '\t' + x
+            formated_lines.append(x)
     return formated_lines[:-2]
 
 def main():
