@@ -19,6 +19,11 @@ Além do python você irá precisar:
 * `requests`: Para fazer o scrapping da pág
 * `webbrowser`: Caso queira abrir a matéria.
 
+Digite no terminal
+
+    pip install bs4 requests webbrowser
+
+
 ## Utilização
 Usando o bash do Linux, como exemplo, você pode utilizar
 
@@ -31,5 +36,5 @@ Para printar os títulos das matérias na página da Folha de SP. Ou utilizar
 Cujo `i` é um inteiro, para abrir a página da i-ésima matéria.
 
 ## Quero adicionar
-* Um scrap do conteúdo da matéria para ser lida direto no terminal
+* ~~Um scrap do conteúdo da matéria para ser lida direto no terminal~~
 * Uma maneira de encontrar máterias com palavras específicas
