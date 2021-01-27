@@ -35,6 +35,10 @@ Para printar os títulos das matérias na página da Folha de SP. Ou utilizar
 
 Cujo `i` é um inteiro, para abrir a página da i-ésima matéria.
 
+Caso você queira ler a matéria direto no terminal, utilize
+
+    $ python3 .../folha_mat.py i -l
+
 ## Quero adicionar
 * ~~Um scrap do conteúdo da matéria para ser lida direto no terminal~~
 * Uma maneira de encontrar máterias com palavras específicas
