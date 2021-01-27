@@ -3,9 +3,11 @@
 
 ## Por que?
 Bem, eu sou preguiçoso e sempre tenho um terminal aberto. Então se você
+
 * tem um terminal sempre aberto
 * quer ver apenas as chamadas das matérias
 * quer abrir só uma matéria específica para ler
+
 O programa serve muito bem.
 
 ## Instalação
@@ -20,11 +22,11 @@ Além do python você irá precisar:
 ## Utilização
 Usando o bash do Linux, como exemplo, você pode utilizar
 
-    python3 .../folha_mat.py
+    $ python3 .../folha_mat.py
 
 Para printar os títulos das matérias na página da Folha de SP. Ou utilizar
 
-    python3 .../folha_mat.py i
+    $ python3 .../folha_mat.py i
 
 Cujo `i` é um inteiro, para abrir a página da i-ésima matéria.
 
