@@ -3,9 +3,11 @@
 
 ## Por que?
 Bem, eu sou preguiçoso e sempre tenho um terminal aberto. Então se você
+
 * tem um terminal sempre aberto
 * quer ver apenas as chamadas das matérias
 * quer abrir só uma matéria específica para ler
+
 O programa serve muito bem.
 
 ## Instalação
