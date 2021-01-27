@@ -22,11 +22,11 @@ Além do python você irá precisar:
 ## Utilização
 Usando o bash do Linux, como exemplo, você pode utilizar
 
-    python3 .../folha_mat.py
+    $ python3 .../folha_mat.py
 
 Para printar os títulos das matérias na página da Folha de SP. Ou utilizar
 
-    python3 .../folha_mat.py i
+    $ python3 .../folha_mat.py i
 
 Cujo `i` é um inteiro, para abrir a página da i-ésima matéria.
 
