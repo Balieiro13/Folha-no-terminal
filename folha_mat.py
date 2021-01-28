@@ -4,14 +4,15 @@ import requests
 import re
 import sys
 
-r = requests.get('https://www.folha.uol.com.br/')
+r          = requests.get('https://www.folha.uol.com.br/')
 r.encoding = 'UTF-8'
-HTML = r.text
-soup = BeautifulSoup(HTML, 'html.parser')
+HTML       = r.text
+soup       = BeautifulSoup(HTML, 'html.parser')
 
 # Pega os títulos das matérias
 def scrap_title():
-    a = soup.find_all('a', {'class':"c-main-headline__url"}) + soup.find_all('a', {'class':"c-list-links__url"})
+    a = soup.find_all('a', {'class': "c-main-headline__url"}) + \
+        soup.find_all('a', {'class': "c-list-links__url"})
     Titles = []
     for i in range(len(a)):
         x = re.sub(r'<.*?>', '', str(a[i]))
@@ -19,9 +20,10 @@ def scrap_title():
         Titles.append(x.strip())
     return Titles
 
-# Pega só os links 
+# Pega só os links
 def scrap_title_link():
-    b = soup.find_all('a', {'class':"c-main-headline__url"}, href=True) + soup.find_all('a', {'class':"c-list-links__url"}, href=True)
+    b = soup.find_all('a', {'class': "c-main-headline__url"}, href=True) + \
+        soup.find_all('a', {'class': "c-list-links__url"}, href=True)
     links = []
     for i in range(len(b)):
         links.append(b[i]['href'])
@@ -29,10 +31,10 @@ def scrap_title_link():
 
 # Pega o conteúdo da matéria
 def scrap_article(n):
-    links = scrap_title_link()
-    news = requests.get(links[n])
+    links         = scrap_title_link()
+    news          = requests.get(links[n])
     news.encoding = 'UTF-8'
-    sopa = BeautifulSoup(news.text, 'html.parser')
+    sopa          = BeautifulSoup(news.text, 'html.parser')
 
     article = sopa.find_all('p')
     formated_lines = []
@@ -47,21 +49,17 @@ def scrap_article(n):
 def main():
     calls = scrap_title()
     links = scrap_title_link()
-
-    try: c = int(sys.argv[1])
-    except IndexError: c = None
-    try: n = sys.argv[2]
-    except IndexError: n = None
+    args  = sys.argv
 
     # abre a n-ésima matéria caso tenha sido passado 'n' como arg
-    if c and not n:
-        wb.open_new(links[c])
-    elif c and n:
-        for line in scrap_article(c):
+    if len(args)   == 2:
+        wb.open_new(links[int(args[1])-1])
+    elif len(args) == 3:
+        for line in scrap_article(int(args[1])-1):
             print(line)
     else:
         for i in range(len(calls)):
-            print(f'[{i}] ', calls[i])
+            print(f'[{i+1}] ', calls[i])
 
 if __name__ == '__main__':
     main()
