@@ -19,10 +19,6 @@ Além do python você irá precisar:
 * `requests`: Para fazer o scrapping da pág
 * `webbrowser`: Caso queira abrir a matéria.
 
-
-    pip install bs4 requests webbrowser
-
-
 ## Utilização
 Usando o bash do Linux, como exemplo, você pode utilizar
 
